@@ -1,7 +1,12 @@
-require "slack/aria/version"
+require 'slack'
+require 'dotenv'
 
-module Slack
-  module Aria
-    # Your code goes here...
-  end
-end
+Dotenv.load
+TOKEN = ENV['SLACK_TOKEN']
+
+require "slack/aria/version"
+require "slack/aria/company"
+require "slack/aria/undine"
+require "slack/aria/akari"
+require "slack/aria/aika"
+require "slack/aria/alice"
