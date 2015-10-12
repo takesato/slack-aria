@@ -22,7 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```shell
+git clone https://github.com/takesato/slack-aria.git
+cd slack-aria
+bundle install
+SLACK_TOKEN=xxxxxxxxxxxxxxx bundle exec bin/slac-aria
+```
 
 ## Development
 
