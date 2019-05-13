@@ -11,6 +11,7 @@ module Slack
         end
 
         def speak(channel, message)
+          return if channel != 'C04R8G5HN'
           message = {
             token: TOKEN,
             username: name,

@@ -12,7 +12,8 @@ module Slack
       end
 
       Company.client.on :message do |data|
-        if data['type'] == 'message' && rand(100) == 0 && data['subtype'] != 'bot_message'
+        p data
+        if data['type'] == 'message' && rand(100) == 0 && !data['subtype'].nil?
           answer = (rand(10) != 0) ? "はひっ" : "えーっ"
           Akari.speak(data['channel'], "<@#{data['user']}> #{answer}")
         end

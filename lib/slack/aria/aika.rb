@@ -12,7 +12,7 @@ module Slack
       end
 
       Company.client.on :message do |data|
-        if(data['type'] == 'message' && data['text'] =~ /奇跡|ミラクル/)
+        if(data['type'] == 'message' && data['subtype'].nil? && data['text'] =~ /奇跡|ミラクル/)
           Aika.speak(data['channel'], "<@#{data['user']}> 恥しいセリフ禁止ー!!")
         end
       end
